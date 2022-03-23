@@ -3,10 +3,9 @@ import java.util.*;
 class FibRec
 {
 	public static void main(String args[]){
-		int max, first=0, second=1, sum=0;
-		Scanner sc = Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Number of Fibonacci series: ");
-		max = sc.nextInt();
+		int max = sc.nextInt();
 		for(int i = 0;i<=max; i++){
 			System.out.print(fibonacciRecursion(i) + " ");
 		}
