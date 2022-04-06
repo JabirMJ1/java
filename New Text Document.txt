@@ -1,24 +1,16 @@
 import java.util.*;
 
-class FibRec
+class Product
 {
-	public static void main(String args[]){
-		int max, first=0, second=1, sum=0;
-		Scanner sc = Scanner(System.in);
-		System.out.println("Number of Fibonacci series: ");
-		max = sc.nextInt();
-		for(int i = 0;i<=max; i++){
-			System.out.print(fibonacciRecursion(i) + " ");
-		}
-	}
+	int p_code;
+	String p_name;
+	double price;
+}
 
-	public static int fibonacciRecursion(int n){
-		if(n==0){
-			return 0;
-		}
-		if(n==1 || n==2){
-			return 1;
-		}
-		return fibonacciRecursion(n-2)+fibonacciRecursion(n-1);
+Class ProductMain
+{
+	public static void main(String args[])
+	{
+		Product prd1 = new Product();
 	}
 }
