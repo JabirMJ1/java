@@ -3,14 +3,14 @@ import java.util.*;
 class Complex
 {
 	int real, img;
-	Complex(real, img){
+	Complex(int real, int img){
 		this.real = real;
 		this.img = img;
 	}
 	void show(){
-		System.out.println("Complex number = " + this.real + " + i " + this.img);
+		System.out.println("Complex number = " + this.real + " + " + this.img + " i ");
 	}
-	Complex add(Complex n1, Complex n2){
+	public static Complex add(Complex n1, Complex n2){
 		Complex res = new Complex(0,0);
 		res.real = n1.real + n2.real;
 		res.img = n1.img + n2.img;
@@ -31,8 +31,8 @@ class Complex
 			c[i] = new Complex(l_real, l_img);
 		}
 		
-		Complex res = add(c[1], c[2]);
+		Complex res = add(c[0], c[1]);
 		System.out.println("Addition is :");
-        	res.showC();
+        	res.show();
 	}
 }
