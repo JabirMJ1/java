@@ -7,14 +7,14 @@ class ProductPrice
 	double p_price;
 	public void show()
 	{
-		System.out.print("Code = " + p_code + "\nName = " + p_name + "\nPrice = " + p_price);
+		System.out.print("Code = " + this.p_code + "\nName = " + this.p_name + "\nPrice = " + this.p_price);
 	}
 	
 	ProductPrice(int code,String name,double price)
 	{
-		p_code = code;
-		p_name = name;
-		p_price = price;
+		this.p_code = code;
+		this.p_name = name;
+		this.p_price = price;
 	}
 	
 	public static void main(String args[])
