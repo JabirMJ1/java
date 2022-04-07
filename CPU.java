@@ -22,15 +22,21 @@ class CPU
 		Scanner sc = new Scanner(System.in);
 		
 		CPU cpu = new CPU();
-		cpu.price = 1000;
+		System.out.println("Enter the details :"); 
+		System.out.print("Price of CPU: ");
+		cpu.price = Integer.parseInt(sc.nextLine());
 		
-		Processor pro = CPU.new Processor();
-		pro.cores = 10;
-		pro.manufacturer = "intel";
+		Processor pro = cpu.new Processor();
+		System.out.print("Enter number of cores: ");
+		pro.cores = Integer.parseInt(sc.nextLine());
+		System.out.print("Enter processor manufacturer: ");
+		pro.manufacturer = sc.nextLine();
 		
 		RAM ram = new RAM();
-		ram.memory = "2tb";
-		ram.manufacturer = "HyperX";
+		System.out.print("Enter RAM memory: ");
+		ram.memory = sc.nextLine();
+		System.out.print("Enter RAM manufacturer: ");
+		ram.manufacturer = sc.nextLine();
 
 		pro.show();
 		ram.show();
