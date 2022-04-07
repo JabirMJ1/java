@@ -38,14 +38,11 @@ class ProductPrice
 			prd[i] = new ProductPrice(code, name, price);
 		}
 
-		double[] prices = new double[]{prd[0].p_price, prd[1].p_price, prd[2].p_price};
+		Double[] prices = new Double[]{prd[0].p_price, prd[1].p_price, prd[2].p_price};
 
 		double min = Math.min(Math.min(prices[0], prices[1]), prices[2]);
 		int index= Arrays.asList(prices).indexOf(min);
-System.out.println(Arrays.asList(prices).indexOf(min));
-System.out.println(min);
-		System.out.println(index);
-		// prd[index].show();
+		prd[index].show();
 	}
 }
 
