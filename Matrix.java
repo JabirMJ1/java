@@ -4,18 +4,18 @@ class Matrix
 	public static void main(String args[])
 	{
 		int row,col,i,j,k;
-		Scanner obj=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);
  		System.out.print("Enter the number of rows: ");
-		row =obj.nextInt();
+		row =sc.nextInt();
  		System.out.print("Enter the number of columns: ");
-		col=obj.nextInt();
+		col=sc.nextInt();
  		int mat[][][] = new int[2][row][col];
 		int result[][] = new int[row][col];
 		for(k=0; k<2; k++){
 			System.out.println("Enter the elements of matrix " + (k+1) + ": ");
 			for (i=0;i<row;i++){
  				for(j=0;j<col;j++)
-					mat[k][i][j]=obj.nextInt();
+					mat[k][i][j]=sc.nextInt();
  			System.out.println();
 			}
 		}

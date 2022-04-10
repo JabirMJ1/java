@@ -9,6 +9,8 @@ class ProductPrice
 	{
 		System.out.print("Code = " + this.p_code + "\nName = " + this.p_name + "\nPrice = " + this.p_price);
 	}
+
+	ProductPrice(){}
 	
 	ProductPrice(int code,String name,double price)
 	{
@@ -29,7 +31,7 @@ class ProductPrice
 		System.out.println("Enter the product details:");
 		
 		for(int i = 0; i<3; i++){
-			System.out.print("Code product " + (i+1) + ": ");
+			System.out.print("\nCode product " + (i+1) + ": ");
 			code = Integer.parseInt(sc.nextLine());
 			System.out.print("Name product " + (i+1) + ": ");
 			name = sc.nextLine();
@@ -42,6 +44,7 @@ class ProductPrice
 
 		double min = Math.min(Math.min(prices[0], prices[1]), prices[2]);
 		int index= Arrays.asList(prices).indexOf(min);
+		System.out.println("\nLowest Price Product: ");
 		prd[index].show();
 	}
 }
