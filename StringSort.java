@@ -4,11 +4,11 @@ class StringSort
 {
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
-		
-		String[] str = new String[];
-		
+
 		System.out.println("Enter the number of strings: ");
-		int max = sc.nextInt();
+		int max = Integer.parseInt(sc.nextLine());
+		
+		String[] str = new String[max];
 		
 		System.out.println("Enter the Numbers: ");
 		for(int i = 0; i<max; i++)
@@ -21,6 +21,7 @@ class StringSort
 		System.out.print(Arrays.toString(str) + "\t");
 
 		Arrays.sort(str);
+		System.out.println("After sort: ");
 		System.out.print(Arrays.toString(str) + "\t");
 	}
 }
