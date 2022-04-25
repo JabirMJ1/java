@@ -12,7 +12,7 @@ class Person
 		this.age = age;
 	}
 
-	public show(){
+	public void show(){
 		System.out.println("address: " + address + "\ngender: " + gender + "\nage: " + age);
 	}
 }
@@ -28,12 +28,12 @@ class Employee extends Person{
 
 		this.empid = empid;
 		this.name = name;
-		this.qual = qual;
+		this.qualification = qual;
 		this.salary = salary;
 	}
 
-	public show(){
-		System.out.println("empid: " + empid + "\name: " + name + "\nqual: " + qual + "\nsalary: " + salary);
+	public void show(){
+		System.out.println("empid: " + empid + "\name: " + name + "\nqual: " + qualification + "\nsalary: " + salary);
 		super.show();
 	}
 }
@@ -44,15 +44,15 @@ class Teacher extends Employee{
 	int teacher_id;
 	
 	Teacher(int teacher_id, String department, String subject, int empid, String e_name, String e_qual, int e_salary, String p_gender, String p_address, int p_age){
-		super(empid, e_name, e_qual, e_salary, p_name, p_gender, p_address, p_age);
+		super(empid, e_name, e_qual, e_salary, p_gender, p_address, p_age);
 
 		this.teacher_id = teacher_id;
 		this.department = department;
 		this.subject = subject;
 	}
 	
-	public show(){
-		System.out.println("Details are \nsubject: " + subject + "\ndepartment: " + department + "\nteacherid: " + teacher_id);
+	public void show(){
+		System.out.println("\nDetails are \nsubject: " + subject + "\ndepartment: " + department + "\nteacherid: " + teacher_id);
 		super.show();
 	}
 }
@@ -77,16 +77,16 @@ class Inheritance{
 		String address = sc.nextLine();
 
 		System.out.println("Age: ");
-		String age = Integer.parseInt(sc.nextLine());
+		int age = Integer.parseInt(sc.nextLine());
 
 		System.out.println("Qualification: ");
 		String qualification = sc.nextLine();
 
 		System.out.println("Salary: ");
-		String salary = Integer.parseInt(sc.nextLine());
+		int salary = Integer.parseInt(sc.nextLine());
 
 		System.out.println("Subject: ");
-		String subject = Integer.parseInt(sc.nextLine());
+		String subject = sc.nextLine();
 
 		System.out.println("Department: ");
 		String department = sc.nextLine();
