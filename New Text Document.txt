@@ -1,97 +1,40 @@
 import java.util.*;
 
-class Person
+interface Demo
 {
-	String name, address, gender;
-	int age;
-	
-	Person(String name, String gender, String address, int age){
-		this.name = name;
-		this.gender = gender;
-		this.address = address;
-		this.age = age;
-	}
+	void area();
+	void peremeter();	
+}
 
-	public show(){
-		System.out.println("address: " + address + "\ngender: " + gender + "\nage: " + age);
+class Rectangle implements Demo{
+	Rectangle
+
+	void area(len, breadth){
+		print(len * breadth);
+	}
+	void peremeter(len, breadth){
+		print(2*(len+breadth));
 	}
 }
 
-class Employee extends Person{
-	int empid;
-	String name;
-	String qualification;
-	int salary;
-
-	Employee(int empid, String name, String qual, int salary, String p_gender, String p_address, int p_age){
-		super(name, p_gender, p_address, p_age);
-
-		this.empid = empid;
-		this.name = name;
-		this.qual = qual;
-		this.salary = salary;
+class Circle implements Demo{
+	void area(radius){
+		print(Math.PI * radius * radius);
 	}
-
-	public show(){
-		System.out.println("empid: " + empid + "\name: " + name + "\nqual: " + qual + "\nsalary: " + salary);
-		super.show();
+	void peremeter(len, breadth){
+		print(2 * Math.PI * radius);
 	}
 }
 
-class Teacher extends Employee{
-	String subject;
-	String department;
-	int teacher_id;
-	
-	Teacher(int teacher_id, String department, String subject, int empid, String e_name, String e_qual, int e_salary, String p_gender, String p_address, int p_age){
-		super(empid, e_name, e_qual, e_salary, p_name, p_gender, p_address, p_age);
-
-		this.teacher_id = teacher_id;
-		this.department = department;
-		this.subject = subject;
-	}
-	
-	public show(){
-		System.out.println("Details are \nsubject: " + subject + "\ndepartment: " + department + "\nteacherid: " + teacher_id);
-		super.show();
-	}
-}
-
-class Inheritance{
+class Interface{
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Empid: ");
-		int empid = Integer.parseInt(sc.nextLine());
-	
-		System.out.println("Teacherid: ");
-		int teacherid = Integer.parseInt(sc.nextLine());		
+		System.out.println("Enter the length of rectangle: ");
+		int len = sc.nextInt();
+		System.out.println("Enter the breadth of rectangle: ");
+		int bre = sc.nextInt();
 
-		System.out.println("Name: ");
-		String name = sc.nextLine();
-
-		System.out.println("Gender: ");
-		String gender = sc.nextLine();
-
-		System.out.println("Address: ");
-		String address = sc.nextLine();
-
-		System.out.println("Age: ");
-		String age = Integer.parseInt(sc.nextLine());
-
-		System.out.println("Qualification: ");
-		String qualification = sc.nextLine();
-
-		System.out.println("Salary: ");
-		String salary = Integer.parseInt(sc.nextLine());
-
-		System.out.println("Subject: ");
-		String subject = Integer.parseInt(sc.nextLine());
-
-		System.out.println("Department: ");
-		String department = sc.nextLine();
-
-		Teacher th = new Teacher(teacherid, department, subject, empid, name, qualification, salary, gender, address, age);
-		th.show();
+		Rectangle rec = new Rectangle();
+		rec.area(len, bre);
 	}
 }
