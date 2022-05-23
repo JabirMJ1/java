@@ -1,40 +1,18 @@
 import java.util.*;
 
-interface Demo
+class arrayList
 {
-	void area();
-	void peremeter();	
-}
-
-class Rectangle implements Demo{
-	Rectangle
-
-	void area(len, breadth){
-		print(len * breadth);
-	}
-	void peremeter(len, breadth){
-		print(2*(len+breadth));
-	}
-}
-
-class Circle implements Demo{
-	void area(radius){
-		print(Math.PI * radius * radius);
-	}
-	void peremeter(len, breadth){
-		print(2 * Math.PI * radius);
-	}
-}
-
-class Interface{
-	public static void main(String args[]){
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the length of rectangle: ");
-		int len = sc.nextInt();
-		System.out.println("Enter the breadth of rectangle: ");
-		int bre = sc.nextInt();
-
-		Rectangle rec = new Rectangle();
-		rec.area(len, bre);
+	public static void main(String args[])
+	{
+		List<String> list = new ArrayList<String>();
+		list.add("Jabir");
+		list.add("Thasni");
+		list.add("Hari");
+		list.add("Ajay");
+		
+		iterator itr = list.iterator();
+		while(itr.hasNext()){
+			System.out.println(itr.next());
+		}
 	}
 }
