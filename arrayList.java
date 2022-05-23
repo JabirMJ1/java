@@ -4,7 +4,7 @@ class arrayList
 {
 	public static void main(String args[])
 	{
-		System.out.flush(); 
+	
 		Scanner sc = new Scanner(System.in);
 	
 		System.out.println("Enter the number of strings: ");
@@ -15,6 +15,8 @@ class arrayList
 		for(int i=0; i<max; i++)
 			list.add(sc.next());
 		list.set(1, "Jabir");
+
+		System.out.println("Size of list = " + list.size());
 		
 		Iterator itr = list.iterator();
 		System.out.println("Entered Strings are: ");
