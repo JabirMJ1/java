@@ -1,7 +1,5 @@
 import java.util.*;
 
-static final String USERNAME = "root";
-static final String PASSWORD = "root";
 
 class UsernameException extends Exception{
 	public UsernameException(String msg){
@@ -18,6 +16,9 @@ class PasswordException extends Exception{
 
 
 class CheckLogin{
+	static final String USERNAME = "root";
+	static final String PASSWORD = "root";
+
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		String username, password;
